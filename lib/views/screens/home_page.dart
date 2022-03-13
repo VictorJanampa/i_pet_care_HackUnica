@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_pet_care/constants.dart';
 import 'package:i_pet_care/models/data/chip_data.dart';
 import 'package:i_pet_care/models/pet_class.dart';
 import 'package:i_pet_care/views/widgets/featured_tip.dart';
@@ -45,22 +46,41 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              "Hola PetLover",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(
-              height: 12,
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: const [
+                  Text(
+                    "Hola PetLover",
+                    style: kTitle1Style,
+                    textAlign: TextAlign.start,
+                  ),
+                  Spacer()
+                ],
+              ),
             ),
             FeaturedTip(tip: tip),
-            buildChoiceChips(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                PetCard(pet: petsData[0]),
-                PetCard(pet: petsData[1]),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.8,
+                child: Center(
+                  child: buildChoiceChips(),
+                ),
+              ),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.3,
+              child: SingleChildScrollView(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    PetCard(pet: petsData[0]),
+                    PetCard(pet: petsData[1]),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

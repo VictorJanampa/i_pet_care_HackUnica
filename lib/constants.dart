@@ -6,6 +6,8 @@ const kSecondaryColor = Color(0xFFF8EAEA);
 
 const kButtonColor = Color(0xFFAF1412);
 
+const kTitle1Style =
+    TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black);
 const kTitle2Style = TextStyle(
     fontSize: 15, fontWeight: FontWeight.bold, overflow: TextOverflow.ellipsis);
 const kDetailStyle = TextStyle(

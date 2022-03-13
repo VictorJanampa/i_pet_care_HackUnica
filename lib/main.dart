@@ -40,10 +40,9 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _index = 1;
+  int _index = 0;
   final screens = [
     const HomePage(),
-    PetDetailPage(pet: Pets.all[0]),
     const AdoptPage(),
     const HomePage(),
   ];
@@ -66,8 +65,8 @@ class _MainPageState extends State<MainPage> {
           destinations: const [
             NavigationDestination(
                 icon: Icon(Icons.home_outlined), label: "Home"),
-            NavigationDestination(
-                icon: Icon(Icons.list_outlined), label: "Tips"),
+            //NavigationDestination(
+            //    icon: Icon(Icons.list_outlined), label: "Tips"),
             NavigationDestination(
                 icon: Icon(Icons.favorite_outlined), label: "Adopt"),
             NavigationDestination(

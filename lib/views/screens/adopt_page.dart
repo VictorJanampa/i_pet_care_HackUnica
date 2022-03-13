@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:i_pet_care/views/widgets/searh_bar.dart';
 
+import '../../constants.dart';
 import '../../models/data/pet_data.dart';
 import '../../models/pet_class.dart';
 import '../widgets/pet_card.dart';
@@ -18,7 +21,19 @@ class _AdoptPageState extends State<AdoptPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text("Haz un nuevo amigo"),
+        Padding(
+          padding: const EdgeInsets.only(top: 16.0, left: 16),
+          child: Row(
+            children: const [
+              Text(
+                "Haz un nuevo amigo",
+                style: kTitle1Style,
+                textAlign: TextAlign.start,
+              ),
+              Spacer(),
+            ],
+          ),
+        ),
         const SearchBar(),
         buildGridView()
         // Column(
