@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:i_pet_care/views/screens/adopt_page.dart';
 import 'package:i_pet_care/views/screens/home_page.dart';
-import 'package:i_pet_care/views/screens/pet_detail_page.dart';
-import 'package:i_pet_care/views/screens/test.dart';
 import 'package:i_pet_care/views/themes/custom_input_theme.dart';
 
 import 'constants.dart';
-import 'models/data/pet_data.dart';
 
 void main() {
   runApp(const MyApp());

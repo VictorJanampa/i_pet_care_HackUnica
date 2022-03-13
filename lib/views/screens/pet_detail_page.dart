@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:i_pet_care/constants.dart';
 import 'package:i_pet_care/views/widgets/button_row_item.dart';
@@ -68,7 +67,7 @@ class _PetDetailPageState extends State<PetDetailPage> {
             ),
             Padding(
               padding: const EdgeInsets.all(16),
-              child: const Text('Gatito', style: kTitle1Style),
+              child: Text(widget.pet.petName, style: kTitle1Style),
             ),
             Row(
               children: const [

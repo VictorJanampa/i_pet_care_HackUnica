@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height * 0.3,
               child: SingleChildScrollView(
                 child: Row(

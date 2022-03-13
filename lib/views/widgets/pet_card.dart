@@ -26,7 +26,7 @@ class _PetCardState extends State<PetCard> {
       elevation: 4,
       child: InkWell(
         borderRadius: kCardBorderRadius,
-        splashColor: kAccentColor.withOpacity(.5),
+        splashColor: kPrimaryColor.withOpacity(.5),
         onTap: () {
           debugPrint('Card Taped');
           Navigator.of(context).push(MaterialPageRoute(
@@ -57,18 +57,24 @@ class _PetCardState extends State<PetCard> {
                 children: [
                   Column(
                     children: [
-                      Text(
-                        widget.pet.petName,
-                        style: kTitle2Style,
+                      SizedBox(
+                        width: 80,
+                        child: Text(
+                          widget.pet.petName,
+                          style: kTitle2Style,
+                        ),
                       ),
-                      Text(
-                        widget.pet.specie,
-                        style: kDetailStyle,
+                      SizedBox(
+                        width: 80,
+                        child: Text(
+                          widget.pet.specie,
+                          style: kDetailStyle,
+                        ),
                       )
                     ],
                   ),
                   Container(
-                    margin: const EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.all(4.0),
                     padding: const EdgeInsets.symmetric(
                         vertical: 2.0, horizontal: 8.0),
                     decoration: BoxDecoration(
